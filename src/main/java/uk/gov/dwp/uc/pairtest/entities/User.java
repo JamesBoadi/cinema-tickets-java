@@ -61,6 +61,13 @@ public class User extends Account {
 			System.out.println("Age of " + name);
 			next = sc.nextLine();
 			age = helpers.checkIfInteger(next);
+			
+			while(age < 0)
+			{
+				System.out.println("Please enter a number greater than 0");
+				next = sc.nextLine();
+				age = helpers.checkIfInteger(next);
+			}
 
 			person.registerPerson(name, age);
 			
